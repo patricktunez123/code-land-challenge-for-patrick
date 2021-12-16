@@ -47,13 +47,13 @@ phone.oninput = function () {
     phoneLabel.innerHTML = "Write your phone number";
   } else if (!isNumberChecker.test(this.value)) {
     phoneLabel.innerHTML =
-      "<span class='error'>That's a funny phone! it has to be numbers!</span>";
+      "<span class='error'>Phone has to be numbers!</span>";
   } else if (
     this.value.toString().length < 8 ||
     this.value.toString().length > 10
   ) {
     phoneLabel.innerHTML =
-      "span class='error'>Phone must be 8 to 10 digits</span>";
+      "<span class='error'>Phone must be 8 to 10 digits</span>";
   } else {
     phoneLabel.innerHTML = "Phone";
   }
@@ -96,7 +96,7 @@ contactForm.addEventListener("submit", (e) => {
       phoneLabel.innerHTML =
         "<span class='error'>Write your phone number<span> ";
     } else {
-      phoneLabel.innerHTML = "null";
+      phoneLabel.innerHTML = null;
     }
   }
 
