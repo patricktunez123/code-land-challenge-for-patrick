@@ -14,3 +14,19 @@ body {
   font-weight: 300;
   font-size: 16px;
 }
+
+::-webkit-scrollbar {
+  width: 0.3em;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a2a3a4;
+}
