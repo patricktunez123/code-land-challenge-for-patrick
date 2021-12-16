@@ -36,9 +36,10 @@ form label::after {
 
 form label span {
   position: absolute;
-  bottom: 30px;
+  bottom: 5px;
   left: 0;
   transition: 0.5s all ease-in;
+  padding-bottom: 1.5rem;
 }
 
 form input:focus + label span,

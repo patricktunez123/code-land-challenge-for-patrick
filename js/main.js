@@ -5,15 +5,15 @@
  */
 
 const usernameLabel = document.querySelector("#usernameLabel");
-usernameLabel.innerHTML = "Name";
+usernameLabel.innerHTML = "<span>Name</span>";
 const emailLabel = document.querySelector("#emailLabel");
-emailLabel.innerHTML = "Email";
+emailLabel.innerHTML = "<span>Email</span>";
 const phoneLabel = document.querySelector("#phoneLabel");
-phoneLabel.innerHTML = "Phone";
+phoneLabel.innerHTML = "<span>Phone</span>";
 const companyLabel = document.querySelector("#companyLabel");
-companyLabel.innerHTML = "Company";
+companyLabel.innerHTML = "<span>Company</span>";
 const messageLabel = document.querySelector("#messageLabel");
-messageLabel.innerHTML = "Your message";
+messageLabel.innerHTML = "<span>Your message</span>";
 
 const contactForm = document.querySelector("#contactForm");
 
@@ -55,7 +55,7 @@ phone.oninput = function () {
     phoneLabel.innerHTML =
       "<span class='error'>Phone must be 8 to 10 digits</span>";
   } else {
-    phoneLabel.innerHTML = "Phone";
+    phoneLabel.innerHTML = "<span>Phone</span>";
   }
 };
 
@@ -73,7 +73,7 @@ contactForm.addEventListener("submit", (e) => {
       usernameLabel.innerHTML =
         "<span class='error'>Write your name and username</span>";
     } else {
-      usernameLabel.innerHTML = "Name";
+      usernameLabel.innerHTML = "<span>Name</span>";
     }
   }
 
@@ -86,7 +86,7 @@ contactForm.addEventListener("submit", (e) => {
       emailLabel.innerHTML =
         "<span class='error'>That's not a valid email!</span> ";
     } else {
-      emailLabel.innerHTML = "Email";
+      emailLabel.innerHTML = "<span>Email</span>";
     }
   }
 
@@ -105,7 +105,7 @@ contactForm.addEventListener("submit", (e) => {
       phoneLabel.innerHTML =
         "<span class='error'>Phone must be 8 to 10 digits</span>";
     } else {
-      phoneLabel.innerHTML = "Phone";
+      phoneLabel.innerHTML = "<span>Phone</span>";
     }
   }
 
@@ -115,7 +115,7 @@ contactForm.addEventListener("submit", (e) => {
       companyLabel.innerHTML =
         "<span class='error'>Write your company name</span> ";
     } else {
-      companyLabel.innerHTML = "Company";
+      companyLabel.innerHTML = "<span>Company</span>";
     }
   }
 
@@ -124,7 +124,7 @@ contactForm.addEventListener("submit", (e) => {
     if (message.value.length < 2) {
       messageLabel.innerHTML = "<span class='error'>Write your message</span> ";
     } else {
-      messageLabel.innerHTML = "Message";
+      messageLabel.innerHTML = "<span>Message</span>";
     }
   }
 });
