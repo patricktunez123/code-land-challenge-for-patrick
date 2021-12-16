@@ -1,0 +1,25 @@
+.app_body {
+  min-height: 75vh;
+  background: #ffffff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.app_conainer {
+  width: 50%;
+  height: 100%;
+  padding: 1rem 0;
+}
+
+.error {
+  color: red;
+}
+
+@media screen and (max-width: 768px) {
+  .app_conainer {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+}

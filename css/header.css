@@ -1,0 +1,16 @@
+.app_header {
+  min-height: 15vh;
+  background: #a6cbde;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .app_header {
+    padding: 0 1rem;
+  }
+  .app_header img {
+    width: 50vw;
+  }
+}

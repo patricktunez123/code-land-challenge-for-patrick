@@ -1,0 +1,30 @@
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 3rem;
+}
+
+.app_btn {
+  width: 105px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+
+.app_primary_btn {
+  background: #a6cbde;
+}
+.app_secondary_btn {
+  background: #a2a3a4;
+}
+
+.app_primary_btn:hover,
+.app_primary_btn:focus,
+.app_secondary_btn:hover,
+.app_secondary_btn:focus {
+  background: #272e31;
+}
