@@ -4,13 +4,18 @@
  * @since Thursday, Dec 16, 2021
  */
 
-const contactForm = document.querySelector("#contactForm");
+const usernameLabel = document.querySelector("#usernameLabel");
+usernameLabel.innerHTML = "Name";
+const emailLabel = document.querySelector("#emailLabel");
+emailLabel.innerHTML = "Email";
+const phoneLabel = document.querySelector("#phoneLabel");
+phoneLabel.innerHTML = "Phone";
+const companyLabel = document.querySelector("#companyLabel");
+companyLabel.innerHTML = "Company";
+const messageLabel = document.querySelector("#messageLabel");
+messageLabel.innerHTML = "Your message";
 
-const errorName = document.querySelector("#errorName");
-const errorEmail = document.querySelector("#errorEmail");
-const errorPhone = document.querySelector("#errorPhone");
-const errorCompany = document.querySelector("#errorCompany");
-const errorMessage = document.querySelector("#errorMessage");
+const contactForm = document.querySelector("#contactForm");
 
 const username = document.querySelector("#username");
 const email = document.querySelector("#email");
@@ -39,16 +44,16 @@ const emailValidationchecker =
 
 phone.oninput = function () {
   if (this.value.toString().length === 0) {
-    errorPhone.innerHTML = "Write your phone number";
+    phoneLabel.innerHTML = "Write your phone number";
   } else if (!isNumberChecker.test(this.value)) {
-    errorPhone.innerHTML = "That's a funny phone! it has to be numbers!";
+    phoneLabel.innerHTML = "That's a funny phone! it has to be numbers!";
   } else if (
     this.value.toString().length < 8 ||
     this.value.toString().length > 10
   ) {
-    errorPhone.innerHTML = "Phone must be 8 to 10 digits";
+    phoneLabel.innerHTML = "Phone must be 8 to 10 digits";
   } else {
-    errorPhone.innerHTML = null;
+    phoneLabel.innerHTML = "Phone";
   }
 };
 
@@ -63,45 +68,47 @@ contactForm.addEventListener("submit", (e) => {
   // Validate username and name
   if (username) {
     if (username.value === "" || username.value === null) {
-      errorUsername.innerHTML = "Write your name and username";
+      usernameLabel.innerHTML = "Write your name and username";
     } else {
-      errorUsername.innerHTML = null;
+      usernameLabel.innerHTML = "Name";
     }
   }
 
   // Validate email
   if (email) {
     if (email.value === "" || email.value === null) {
-      errorEmail.innerHTML = "Write an email (example@example.com)";
+      emailLabel.innerHTML = "Write an email (example@example.com)";
     } else if (!email.value.toLowerCase().match(emailValidationchecker)) {
-      errorEmail.innerHTML = "That's not a valid email!";
+      emailLabel.innerHTML = "That's not a valid email!";
     } else {
-      errorEmail.innerHTML = null;
+      emailLabel.innerHTML = "Email";
     }
   }
 
   // Validate phone
   if (phone) {
     if (phone.value.toString().length === 0) {
-      errorPhone.innerHTML = "Write your phone number";
+      phoneLabel.innerHTML = "Write your phone number";
+    } else {
+      phoneLabel.innerHTML = "null";
     }
   }
 
   // Validate company
   if (company) {
     if (company.value === "" || company.value === null) {
-      errorCompany.innerHTML = "Write your company name";
+      companyLabel.innerHTML = "Write your company name";
     } else {
-      errorCompany.innerHTML = null;
+      companyLabel.innerHTML = "Company";
     }
   }
 
   // Validate message
   if (message) {
     if (message.value.length < 2) {
-      errorMessage.innerHTML = "Write your message";
+      messageLabel.innerHTML = "Write your message";
     } else {
-      errorMessage.innerHTML = null;
+      messageLabel.innerHTML = "Message";
     }
   }
 });

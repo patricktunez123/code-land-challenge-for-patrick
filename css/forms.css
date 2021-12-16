@@ -35,7 +35,7 @@ form label::after {
 
 form label span {
   position: absolute;
-  bottom: 15px;
+  bottom: 30px;
   left: 0;
   transition: 0.5s all ease-in;
 }
