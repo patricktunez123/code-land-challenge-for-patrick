@@ -44,7 +44,7 @@ const emailValidationchecker =
 
 phone.oninput = function () {
   if (this.value.toString().length === 0) {
-    phoneLabel.innerHTML = "Write your phone number";
+    phoneLabel.innerHTML = "<span class='error'>Write your phone number</span>";
   } else if (!isNumberChecker.test(this.value)) {
     phoneLabel.innerHTML =
       "<span class='error'>Phone has to be numbers!</span>";
@@ -92,12 +92,16 @@ contactForm.addEventListener("submit", (e) => {
 
   // Validate phone
   if (phone) {
-    if (phone.toString().length === 0) {
-      phoneLabel.innerHTML = "Write your phone number";
-    } else if (!isNumberChecker.test(phone)) {
+    if (phone.value.toString().length === 0) {
+      phoneLabel.innerHTML =
+        "<span class='error'>Write your phone number</span>";
+    } else if (!isNumberChecker.test(phone.value)) {
       phoneLabel.innerHTML =
         "<span class='error'>Phone has to be numbers!</span>";
-    } else if (phone.toString().length < 8 || phone.toString().length > 10) {
+    } else if (
+      phone.value.toString().length < 8 ||
+      phone.value.toString().length > 10
+    ) {
       phoneLabel.innerHTML =
         "<span class='error'>Phone must be 8 to 10 digits</span>";
     } else {
