@@ -1,0 +1,9 @@
+.app_footer {
+  min-height: 10vh;
+  background: #222a2e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-weight: 700;
+}

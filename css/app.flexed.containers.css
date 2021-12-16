@@ -1,0 +1,17 @@
+.app_row {
+  display: flex;
+}
+.app_col {
+  width: 100%;
+  margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.col_gap_large {
+  column-gap: 10rem;
+}
+
+.col_gap_medium {
+  column-gap: 3rem;
+}

@@ -1,0 +1,7 @@
+.app_header {
+  min-height: 15vh;
+  background: #a6cbde;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

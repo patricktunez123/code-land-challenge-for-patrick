@@ -1,0 +1,49 @@
+form {
+  width: 50%;
+}
+
+form input {
+  width: 100%;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #000000;
+}
+
+form label {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid #000000;
+  pointer-events: none;
+}
+
+form label::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  border-bottom: 2px solid green;
+  transform: translateX(-100%);
+  transition: 0.5s all ease-in;
+}
+
+form label span {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  transition: 0.5s all ease-in;
+}
+
+form input:focus + label span {
+  transform: translateY(-90%);
+  color: green;
+}
+
+form input:focus + label::after {
+  transform: translateY(0%);
+}
