@@ -13,6 +13,10 @@
   padding: 1rem 0;
 }
 
+.error {
+  color: red;
+}
+
 @media screen and (max-width: 768px) {
   .app_conainer {
     width: 100%;

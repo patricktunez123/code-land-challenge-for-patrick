@@ -33,7 +33,7 @@ const message = document
 
 const isNumberChecker = /^\d+$/; // equivalent to [0 - 9]
 const emailValidationchecker =
-  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<span>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 /**
  * Validate the phone input automatically when the value changes, in this function; the THIS keyword refers
@@ -46,12 +46,14 @@ phone.oninput = function () {
   if (this.value.toString().length === 0) {
     phoneLabel.innerHTML = "Write your phone number";
   } else if (!isNumberChecker.test(this.value)) {
-    phoneLabel.innerHTML = "That's a funny phone! it has to be numbers!";
+    phoneLabel.innerHTML =
+      "span class='error'>That's a funny phone! it has to be numbers!</span>";
   } else if (
     this.value.toString().length < 8 ||
     this.value.toString().length > 10
   ) {
-    phoneLabel.innerHTML = "Phone must be 8 to 10 digits";
+    phoneLabel.innerHTML =
+      "span class='error'>Phone must be 8 to 10 digits</span>";
   } else {
     phoneLabel.innerHTML = "Phone";
   }
@@ -68,7 +70,8 @@ contactForm.addEventListener("submit", (e) => {
   // Validate username and name
   if (username) {
     if (username.value === "" || username.value === null) {
-      usernameLabel.innerHTML = "Write your name and username";
+      usernameLabel.innerHTML =
+        "<span class='error'>Write your name and username</span>";
     } else {
       usernameLabel.innerHTML = "Name";
     }
@@ -77,9 +80,11 @@ contactForm.addEventListener("submit", (e) => {
   // Validate email
   if (email) {
     if (email.value === "" || email.value === null) {
-      emailLabel.innerHTML = "Write an email (example@example.com)";
+      emailLabel.innerHTML =
+        "<span class='error'>Write an email (example@example.com)</span>";
     } else if (!email.value.toLowerCase().match(emailValidationchecker)) {
-      emailLabel.innerHTML = "That's not a valid email!";
+      emailLabel.innerHTML =
+        "<span class='error'>That's not a valid email!</span> ";
     } else {
       emailLabel.innerHTML = "Email";
     }
@@ -88,7 +93,8 @@ contactForm.addEventListener("submit", (e) => {
   // Validate phone
   if (phone) {
     if (phone.value.toString().length === 0) {
-      phoneLabel.innerHTML = "Write your phone number";
+      phoneLabel.innerHTML =
+        "<span class='error'>Write your phone number<span> ";
     } else {
       phoneLabel.innerHTML = "null";
     }
@@ -97,7 +103,8 @@ contactForm.addEventListener("submit", (e) => {
   // Validate company
   if (company) {
     if (company.value === "" || company.value === null) {
-      companyLabel.innerHTML = "Write your company name";
+      companyLabel.innerHTML =
+        "<span class='error'>Write your company name</span> ";
     } else {
       companyLabel.innerHTML = "Company";
     }
@@ -106,7 +113,7 @@ contactForm.addEventListener("submit", (e) => {
   // Validate message
   if (message) {
     if (message.value.length < 2) {
-      messageLabel.innerHTML = "Write your message";
+      messageLabel.innerHTML = "<span class='error'>Write your message</span> ";
     } else {
       messageLabel.innerHTML = "Message";
     }
