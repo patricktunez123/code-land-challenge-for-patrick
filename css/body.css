@@ -6,3 +6,9 @@
   align-items: center;
   flex-direction: column;
 }
+
+.app_conainer {
+  width: 50%;
+  height: 100%;
+  padding: 1rem 0;
+}

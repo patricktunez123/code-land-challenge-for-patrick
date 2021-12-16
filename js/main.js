@@ -16,7 +16,9 @@ const username = document.querySelector("#username");
 const email = document.querySelector("#email");
 const phone = document.getElementById("phone");
 const company = document.querySelector("#company");
-const message = document.querySelector("#message");
+const message = document
+  .getElementById("textarea_row")
+  .getElementsByTagName("textarea")[0];
 
 /**
  * Regexes
@@ -96,7 +98,7 @@ contactForm.addEventListener("submit", (e) => {
 
   // Validate message
   if (message) {
-    if (message.value === "" || message.value === null) {
+    if (message.value.length < 2) {
       errorMessage.innerHTML = "Write your message";
     } else {
       errorMessage.innerHTML = null;

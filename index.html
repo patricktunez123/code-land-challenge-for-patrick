@@ -7,6 +7,8 @@
     <title>Code Land challenge to Patrick</title>
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/app.flexed.containers.css" />
+    <link rel="stylesheet" href="css/typography.css" />
+    <link rel="stylesheet" href="css/buttons.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/body.css" />
     <link rel="stylesheet" href="css/forms.css" />
@@ -17,51 +19,51 @@
       <img src="./img/codeland.png" alt="" />
     </div>
     <div class="app_body">
-      <h1>Contact us!</h1>
-      <form id="contactForm">
-        <div class="app_row col_gap_large">
-          <div class="app_col">
-            <input type="text" id="username" />
-            <label for="username"><span>Name</span></label>
-            <div id="errorUsername"></div>
+      <div class="app_conainer">
+        <h1 class="bold_text big_text text_222A2E">Contact us!</h1>
+        <form id="contactForm">
+          <div class="app_row col_gap_large">
+            <div class="app_col">
+              <input type="text" id="username" />
+              <label for="username"><span>Name</span></label>
+              <div id="errorUsername"></div>
+            </div>
+            <div class="app_col">
+              <input type="text" id="email" />
+              <label for="email"><span>Email</span></label>
+              <div id="errorEmail"></div>
+            </div>
           </div>
-          <div class="app_col">
-            <input type="text" id="email" />
-            <label for="email"><span>Email</span></label>
-            <div id="errorEmail"></div>
-          </div>
-        </div>
 
-        <div class="app_row col_gap_large">
-          <div class="app_col">
-            <input type="text" id="phone" />
-            <label for="phone"><span>Phone</span></label>
-            <div id="errorPhone"></div>
+          <div class="app_row col_gap_large">
+            <div class="app_col">
+              <input type="text" id="phone" />
+              <label for="phone"><span>Phone</span></label>
+              <div id="errorPhone"></div>
+            </div>
+            <div class="app_col">
+              <input type="text" id="company" />
+              <label for="company"><span>Company</span></label>
+              <div id="errorCompany"></div>
+            </div>
           </div>
-          <div class="app_col">
-            <input type="text" id="company" />
-            <label for="company"><span>Company</span></label>
-            <div id="errorCompany"></div>
-          </div>
-        </div>
 
-        <div class="app_row">
-          <div class="app_col">
-            <input type="text" id="message" />
-            <label for="message"><span>Your message</span></label>
-            <div id="errorMessage"></div>
+          <div class="app_row" id="textarea_row">
+            <div class="app_col">
+              <textarea id="message"> </textarea>
+              <label for="message"><span>Your message</span></label>
+              <div id="errorMessage">dd</div>
+            </div>
           </div>
-        </div>
 
-        <div class="app_row col_gap_medium">
-          <div class="app_col">
-            <button type="submit">Send</button>
+          <div class="buttons">
+            <button class="app_btn app_primary_btn" type="submit">Send</button>
+            <button class="app_btn app_secondary_btn" type="reset">
+              Reset
+            </button>
           </div>
-          <div class="app_col">
-            <button type="reset">Reset</button>
-          </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
     <div class="app_footer">© CODELAND 2020</div>
     <script src="js/main.js"></script>
