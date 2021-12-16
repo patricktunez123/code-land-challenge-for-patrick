@@ -19,6 +19,8 @@ form label {
   left: 0;
   border-bottom: 1px solid #000000;
   pointer-events: none;
+}
+form label .error {
   font-size: 14px;
 }
 
