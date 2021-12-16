@@ -1,5 +1,5 @@
 .app_body {
-  height: 75vh;
+  min-height: 75vh;
   background: #ffffff;
   display: flex;
   justify-content: flex-start;
@@ -11,4 +11,11 @@
   width: 50%;
   height: 100%;
   padding: 1rem 0;
+}
+
+@media screen and (max-width: 768px) {
+  .app_conainer {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
 }
