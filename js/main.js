@@ -73,7 +73,6 @@ contactForm.addEventListener("submit", (e) => {
 
   // Validate username and name
   if (username) {
-    console.log("usernameLabel", usernameLabel);
     if (username.value === "" || username.value === null) {
       usernameLabel.innerHTML =
         "<span class='error'>Write your name and username</span>";
