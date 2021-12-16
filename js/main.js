@@ -96,7 +96,7 @@ contactForm.addEventListener("submit", (e) => {
       phoneLabel.innerHTML =
         "<span class='error'>Write your phone number<span> ";
     } else {
-      phoneLabel.innerHTML = null;
+      phoneLabel.innerHTML = "Phone";
     }
   }
 
