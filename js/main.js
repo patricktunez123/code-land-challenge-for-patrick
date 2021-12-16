@@ -92,9 +92,14 @@ contactForm.addEventListener("submit", (e) => {
 
   // Validate phone
   if (phone) {
-    if (phone.value.toString().length === 0) {
+    if (phone.toString().length === 0) {
+      phoneLabel.innerHTML = "Write your phone number";
+    } else if (!isNumberChecker.test(phone)) {
       phoneLabel.innerHTML =
-        "<span class='error'>Write your phone number<span> ";
+        "<span class='error'>Phone has to be numbers!</span>";
+    } else if (phone.toString().length < 8 || phone.toString().length > 10) {
+      phoneLabel.innerHTML =
+        "<span class='error'>Phone must be 8 to 10 digits</span>";
     } else {
       phoneLabel.innerHTML = "Phone";
     }
