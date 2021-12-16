@@ -45,17 +45,21 @@ const emailValidationchecker =
 phone.oninput = function () {
   if (this.value.toString().length === 0) {
     phoneLabel.innerHTML = "<span class='error'>Write your phone number</span>";
+    phoneLabel.classList.add("error_border");
   } else if (!isNumberChecker.test(this.value)) {
     phoneLabel.innerHTML =
       "<span class='error'>Phone has to be numbers!</span>";
+    phoneLabel.classList.add("error_border");
   } else if (
     this.value.toString().length < 8 ||
     this.value.toString().length > 10
   ) {
     phoneLabel.innerHTML =
       "<span class='error'>Phone must be 8 to 10 digits</span>";
+    phoneLabel.classList.add("error_border");
   } else {
     phoneLabel.innerHTML = "<span>Phone</span>";
+    phoneLabel.classList.remove("error_border");
   }
 };
 
@@ -69,11 +73,14 @@ contactForm.addEventListener("submit", (e) => {
 
   // Validate username and name
   if (username) {
+    console.log("usernameLabel", usernameLabel);
     if (username.value === "" || username.value === null) {
       usernameLabel.innerHTML =
         "<span class='error'>Write your name and username</span>";
+      usernameLabel.classList.add("error_border");
     } else {
       usernameLabel.innerHTML = "<span>Name</span>";
+      usernameLabel.classList.remove("error_border");
     }
   }
 
@@ -82,11 +89,14 @@ contactForm.addEventListener("submit", (e) => {
     if (email.value === "" || email.value === null) {
       emailLabel.innerHTML =
         "<span class='error'>Write an email (example@example.com)</span>";
+      emailLabel.classList.add("error_border");
     } else if (!email.value.toLowerCase().match(emailValidationchecker)) {
       emailLabel.innerHTML =
         "<span class='error'>That's not a valid email!</span> ";
+      emailLabel.classList.add("error_border");
     } else {
       emailLabel.innerHTML = "<span>Email</span>";
+      emailLabel.classList.remove("error_border");
     }
   }
 
@@ -95,17 +105,21 @@ contactForm.addEventListener("submit", (e) => {
     if (phone.value.toString().length === 0) {
       phoneLabel.innerHTML =
         "<span class='error'>Write your phone number</span>";
+      phoneLabel.classList.add("error_border");
     } else if (!isNumberChecker.test(phone.value)) {
       phoneLabel.innerHTML =
         "<span class='error'>Phone has to be numbers!</span>";
+      phoneLabel.classList.add("error_border");
     } else if (
       phone.value.toString().length < 8 ||
       phone.value.toString().length > 10
     ) {
       phoneLabel.innerHTML =
         "<span class='error'>Phone must be 8 to 10 digits</span>";
+      phoneLabel.classList.add("error_border");
     } else {
       phoneLabel.innerHTML = "<span>Phone</span>";
+      phoneLabel.classList.remove("error_border");
     }
   }
 
@@ -114,8 +128,10 @@ contactForm.addEventListener("submit", (e) => {
     if (company.value === "" || company.value === null) {
       companyLabel.innerHTML =
         "<span class='error'>Write your company name</span> ";
+      companyLabel.classList.add("error_border");
     } else {
       companyLabel.innerHTML = "<span>Company</span>";
+      companyLabel.classList.remove("error_border");
     }
   }
 
@@ -123,8 +139,10 @@ contactForm.addEventListener("submit", (e) => {
   if (message) {
     if (message.value.length < 2) {
       messageLabel.innerHTML = "<span class='error'>Write your message</span> ";
+      messageLabel.classList.add("error_border");
     } else {
       messageLabel.innerHTML = "<span>Message</span>";
+      messageLabel.classList.remove("error_border");
     }
   }
 });

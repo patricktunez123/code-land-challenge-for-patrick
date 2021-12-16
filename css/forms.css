@@ -53,3 +53,7 @@ form input:focus + label::after,
 form textarea:focus + label::after {
   transform: translateY(0%);
 }
+
+.error_border {
+  border-color: red;
+}
