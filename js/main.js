@@ -47,7 +47,7 @@ phone.oninput = function () {
     phoneLabel.innerHTML = "Write your phone number";
   } else if (!isNumberChecker.test(this.value)) {
     phoneLabel.innerHTML =
-      "span class='error'>That's a funny phone! it has to be numbers!</span>";
+      "<span class='error'>That's a funny phone! it has to be numbers!</span>";
   } else if (
     this.value.toString().length < 8 ||
     this.value.toString().length > 10
